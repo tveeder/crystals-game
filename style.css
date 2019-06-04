@@ -1,0 +1,64 @@
+
+
+#theheader {
+    background-color: beige;
+    color: black;
+    width: 50%;
+
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+body {
+
+    background-color: blue
+
+
+}
+
+.pclass1{
+
+    background-color: red
+
+}
+
+#randomscore {
+
+    background-color: lightgray;
+    width: 20%;
+    padding: 5px;
+}
+
+
+#scoreboard {
+
+background-color: yellow;
+
+width: 30%;
+padding: 10px:
+
+}
+
+#tablecontainer{
+
+    background-color: cornsilk;
+    width: 30%;
+    padding: 5px;
+}
+
+#scoreLabel {
+
+    background-color: dodgerblue;
+    width: 20%;
+    /* float: left; */
+    padding: 10px;
+}
+
+#totalscore {
+
+    background-color: pink;
+    width: 40%;
+    padding: 30px;
+    /* float: left; */
+}
