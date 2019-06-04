@@ -2,23 +2,35 @@
 //  with JQuery
 
 
-alert("this is connected to javascript");
+$(document).ready(function () {
 
-// var score = 0;
-// $(document).ready(function () {
+    //////////
+    alert("this is connected to javascript");
 
-//     $("#randomscore").click(increment);
+    $("#randomscore").on("click", function () {
+        var randNumber = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
+        $("#randomscore").html(randNumber);
+    });
 
-// }); //end.ready
+    ////////
+    $("#tablecontainer").on("click", function () {
 
-// function increment() {
-//     score += 1
+        var randNumber = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
 
-// }; //end increment
+        $("#tablecontainer").html(randNumber);
+
+        console.log(randNumber);
+
+        ////////    
+
+        $("#totalscore").html(randNumber);
+
+        $("#scoreLabel").html(randNumber);
+
+    });
 
 
 
 
-
-
+});
 
