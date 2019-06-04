@@ -13,38 +13,42 @@ $(document).ready(function () {
     });
 
     ////////
-    $("#tablecontainer").on("click", function () {
+    // $("#tablecontainer").on("click", function () {
 
+    // });
 
-        // console.log(randNumber);
+    $("#box1").on("click", function () {
 
-        // ////////    
-
-        // $("#totalscore").html(randNumber);
-
-        // // $("#scoreLabel").html("Total: " + randNumber);
+        $("#randomscore").html(randNumber);
+        alert("New score: " + counter);
 
     });
 
-    $(".crystal-image").on("click", function () {
+    $("#box2").on("click", function () {
 
-        // We'll then increment the counter each time by the randomly selected number.
-        // If the number is 11, then users can win. (11 + 11 + 11 + 11 + 11 = 55)
-        // If the number is 10, then there is no way for the user to win. (10 + 10 + 10 + 10 + 10 = 60)
-        counter += increment;
+
+        alert("New score: " + counter);
+    });
+
+    $("#box3").on("click", function () {
+
+
+        alert("New score: " + counter);
+    });
+
+    $("#box4").on("click", function () {
+
 
         alert("New score: " + counter);
 
-
-        if (counter === targetNumber) {
-            alert("You win!");
-        }
-
-        else if (counter >= targetNumber) {
-            alert("You lose!!");
-        }
     });
 
+    // if (counter === targetNumber) {
+    //     alert("You win!");
+    // }
+
+    // else if (counter >= targetNumber) {
+    //     alert("You lose!!");
+    // }
 
 });
-

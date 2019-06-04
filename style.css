@@ -34,7 +34,7 @@ body {
 #tablecontainer{
 
     background-color: rgb(209, 186, 92);
-    width: 300px;
+    width: 400px;
     height: 150px;
     padding: 10px;
 }
@@ -63,6 +63,13 @@ body {
     float: left;
 }
 
+#box4 {
+
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    float: right;
+}
 
 #scoreboard {
 
