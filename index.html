@@ -11,10 +11,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
 </head>
-
-
 
 <body>
 
@@ -24,67 +21,55 @@
 
         There are four crystals below. By clicking on a crystal you will add a specific amount of points to you score.
 
+    </p>
+
+    <p class="pclass2">
         You win the game by matching your total score to the random number, you lose the game if your total score goes
         above the random number.
 
         The value of each crystal is hidden from you until you click on it.
 
         Each time when the game starts, the game will change the values of each crystal.
+
     </p>
+
+    <h2>Number to guess: <span id="targetnum"></span> </h2>
 
     <p id="randomscore">
-
         Target Number:
-
     </p>
-
-
     <div id="scoreboard">
-
-
-        <p>
-            Wins:
-        </p>
-
-        <p>
-            Losses:
-        </p>
+        <h3>
+            Wins: <span id="scorewin"></span>
+        </h3>
+        <h4>
+            Losses: <span id="scoreloss"></span>
+        </h4>
     </div>
 
     <div id="tablecontainer">
 
+        <div id="theimages">
+        </div>
+
         <div id="box1">
-
         </div>
-
         <div id="box2">
-
         </div>
-
         <div id="box3">
-
         </div>
-
         <div id="box4">
-
         </div>
-
     </div>
 
     <p id="scorelabel">
         Your total score is:
     </p>
-
     <p id="totalscore">
-
     </p>
 
-    <img class="crystal-image" src="./crystals/images.jpg" alt="">
-
     <script src="game.js"> </script>
+
 </body>
-
-
-
 
 </html>
