@@ -1,75 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Collector</title>
-
+    <title>Crystal Game</title>
     <link rel="stylesheet" href="style.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 
 <body>
 
-    <h1 id="theheader">*** Crystals Collector ***</h1>
-
-    <p class="pclass1">You will be given a random number at the beginning of the game
-
-        There are four crystals below. By clicking on a crystal you will add a specific amount of points to you score.
-
-    </p>
-
-    <p class="pclass2">
-        You win the game by matching your total score to the random number, you lose the game if your total score goes
-        above the random number.
-
-        The value of each crystal is hidden from you until you click on it.
-
-        Each time when the game starts, the game will change the values of each crystal.
-
-    </p>
-
-    <h2>Number to guess: <span id="targetnum"></span> </h2>
-
-    <p id="randomscore">
-        Target Number:
-    </p>
-    <div id="scoreboard">
-        <h3>
-            Wins: <span id="scorewin"></span>
-        </h3>
-        <h4>
-            Losses: <span id="scoreloss"></span>
-        </h4>
+    <h1 id="title">Crystals Collector!</h1>
+    <br><br><br><br><br><br><br>
+    <div id="instr-back">
+        <p id="instructions">You will be given a random "number to guess" at the start of the game.<br><br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. <br><br> You win the game by matching your total
+            score to the "number to guess". You lose the game if your total score goes above he random number. <br><br>The value of each crystal is hidden from you until you click on it.<br><br>Each time the game starts, the values on the crystals change
+            too!
+        </p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="target-back">
+        <p id="numGuess">Number to Guess:<br><br> <span id="targetNumber"></span></p>
     </div>
 
-    <div id="tablecontainer">
+    <div id="counter-back">
+        <p id="wins">Wins: <span id="winCounter"></span></p>
+        <p id="losses">Losses: <span id="lossCounter"></span></p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <div id="theimages">
-        </div>
-
-        <div id="box1">
-        </div>
-        <div id="box2">
-        </div>
-        <div id="box3">
-        </div>
-        <div id="box4">
-        </div>
+    <div class="back">
+        <img class="cry-img" id="Hawks1" src="images/Hawks1.png" alt="Hawks1">
+    </div>
+    <div class="back">
+        <img class="cry-img" id="Hawks2" src="images/Hawks2.png" alt="Hawks2">
+    </div>
+    <div class="back">
+        <img class="cry-img" id="Hawks3" src="images/Hawks3.png" alt="Hawks3">
+    </div>
+    <div class="back">
+        <img class="cry-img" id="Hawks4" src="images/Hawks4.png" alt="Hawks4">
     </div>
 
-    <p id="scorelabel">
-        Your total score is:
-    </p>
-    <p id="totalscore">
-    </p>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <script src="game.js"> </script>
+    <div id="score">
+        <p id="score-txt">Your total score is:</p>
+    </div>
 
+    <br><br><br><br>
+
+    <div id="score-back">
+        <div id="curScore"></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="game.js"></script>
 </body>
 
 </html>
