@@ -1,81 +1,95 @@
-// This program is the crystal click game.  
+var winCounter = 0;
+var lossCounter = 0;
+var targetNumber = Math.floor(Math.random() * 101) + 19;
+$("#targetNumber").text(targetNumber);
+
+
+
+var Hawks1 = Math.floor(Math.random() * 11) + 1;
+var Hawks2 = Math.floor(Math.random() * 11) + 1;
+var Hawks3 = Math.floor(Math.random() * 11) + 1;
+var Hawks4 = Math.floor(Math.random() * 11) + 1;
+
+
+$("#winCounter").html(winCounter);
+$("#lossCounter").html(lossCounter);
 
 var counter = 0;
-var targetNumber = 0;
-var scorewin = 0;
-var scoreloss = 0;
+$("#curScore").text(counter);
 
+function restartGame() {
 
-var numberOptions = [];
-
-
-function newGame() {
-    var randNumber = Math.floor(Math.random() * (120 - 1 + 1)) + 1;
-    $("#randomscore").html(randNumber);
-    targetNumber = randNumber;
-
-    $("#targetnum").text(targetNumber);
-
-
+    targetNumber = Math.floor(Math.random() * 101) + 19;
+    $("#targetNumber").text(targetNumber);
+    Hawks1 = Math.floor(Math.random() * 11) + 1;
+    Hawks2 = Math.floor(Math.random() * 11) + 1;
+    Hawks3 = Math.floor(Math.random() * 11) + 1;
+    Hawks4 = Math.floor(Math.random() * 11) + 1;
     counter = 0;
-    //console.log(counter)
-    // alert("isthisgettingcalled")
+    $("#curScore").text(counter);
 
-    $("totalscore").html("1");
-    numberOptions; //resets the array
-
-    var num = 0;
-    for (var i = 0; i <= 4; i++) {
-
-        num = Math.floor((Math.random() * 100) + 1);
-        numberOptions.push(num);
-        console.log(numberOptions);
-    }
-    return numberOptions;
-}
-newGame();
-
-// this loads the images
-for (var i = 0; i <= 4; i++) {
-
-    var theImage = $("<img>");
-
-    theImage.addClass("crystal-image");
-
-    theImage.attr("src", "./assets/crystals/images.jpg");
-
-    // theImage.attr("data-crystalvalue", Math.floor((Math.random() * 100) + 1));
-    theImage.attr("data-crystalvalue", numberOptions[i]);
-
-    $("#box" + i).append(theImage);
 }
 
-// action which happens when you click a crystal
-$(".crystal-image").on("click", function() {
+function win() {
 
-    var crystalValue = ($(this).attr("data-crystalvalue"));
-    crystalValue = parseInt(crystalValue);
-    //console.log(crystalValue);
+    alert("You win!");
+    winCounter++;
+    $("#winCounter").text(winCounter);
+    restartGame();
+}
 
-    counter += crystalValue;
+function lose() {
 
-    alert("New score: " + counter);
+    alert("You lose!");
+    lossCounter++;
+    $("#lossCounter").text(lossCounter);
+    restartGame();
+}
 
-    $("#totalscore").html(counter);
-    console.log(counter);
+$('#Hawks1').on('click', function() {
+    counter = counter + Hawks1;
 
+    $('#curScore').text(counter);
 
-
-    if (counter === targetNumber) {
-        alert("You win!");
-        scorewin++;
-        $("#scorewin").text(scorewin);
-        newGame();
-    } else if (counter >= targetNumber) {
-        alert("You lose!!");
-        scoreloss++;
-        $("#scoreloss").text(scoreloss);
-        newGame();
+    if (counter == targetNumber) {
+        win();
+    } else if (counter > targetNumber) {
+        lose();
     }
+});
 
+$('#Hawks2').on('click', function() {
+    counter = counter + Hawks2;
+
+    $('#curScore').text(counter);
+
+    if (counter == targetNumber) {
+        win();
+    } else if (counter > targetNumber) {
+        lose();
+    }
+});
+
+$('#Hawks3').on('click', function() {
+    counter = counter + Hawks3;
+
+    $('#curScore').text(counter);
+
+    if (counter == targetNumber) {
+        win();
+    } else if (counter > targetNumber) {
+        lose();
+    }
+});
+
+$('#Hawks4').on('click', function() {
+    counter = counter + Hawks4;
+
+    $('#curScore').text(counter);
+
+    if (counter == targetNumber) {
+        win();
+    } else if (counter > targetNumber) {
+        lose();
+    }
 });

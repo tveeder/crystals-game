@@ -58,7 +58,7 @@ body {
 }
 
 #counter-back {
-    background-color: black;
+    background-color: red;
     float: left;
     margin-left: 40px;
     border-style: solid;
